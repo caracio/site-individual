@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="Inicio.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="navbar-main/navbar-main/style.css">     
+    <script src="navbar-main/navbar-main/mobile-navbar.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Entrar</title>
+</head>
+
+<body>
+    <!-- <div class="header">
+        <nav id="menu-h">
+            <ul>
+                <li>
+                    <a class="home" href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li><a href="jogosHoje.html">Jogos de hoje</a></li>
+
+                <li>
+                    <div class="dropdown">
+                        <button class="dropbtn">Campeonatos </button>
+                        <div class="dropdown-content">
+                            <a href="campBR.html">Campeonato Brasileiro</a>
+                            <a href="#">Campeonato Alemão </a>
+                            <a href="#">Campeonato Inglês</a>
+                            <a href="#">Campeonato Espanhol</a>
+                            <a href="#">Campeonato Italiano</a>
+                            <a href="#">Campeonato Francês</a>
+                        </div>
+                    </div>
+                </li>
+
+                <li><a href="#">Favoritos</a></li>
+
+                <li><a id="entrar" href="Cadastro.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </div> -->
+    <header>
+        <nav>
+          <a class="logo" href="index.html">Palmeirático</a>
+          <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul class="nav-list">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="Próximosjgs.html">Próximos Jogos</a></li>
+            <li><a href="historia.html">História</a></li>
+            <li><a href="Cadastro.html">Entrar</a></li>
+          </ul>
+        </nav>
+      </header>
+      
+ 
+
+
+    <div class="mensagemacerto">
+        <ul id="mensagemAcerto"> </ul></div>
+        
+    <div class="basea" id="entrandoa">
+        <div class="titulo">
+            <h2>Entrar</h2> <br>
+        </div>
+        <form class="cadastrocaixa">
+
+            <label class="oque"> Usuário</label> <input required type="email" class="inputu"
+                placeholder="Digite o usuário ou email" id="login">
+            <br>
+
+            <label class="oque"> Senha 
+                <br>
+            </label> <input required id="senha" type="password" class="inputu"
+                placeholder="Digite sua senha">
+            <br>
+            <button type="button" class="butau" onclick="entrando()"> Entrar</button>
+            <br>
+            <div class="mostrar" onclick="show()"> Caso não possua conta clique aqui</div>
+        </form>
+    </div>
+
+    <div class="cadastru" id="cadastrar">
+        <div class="basea">
+            <div class="titulo">
+                <h2>Cadastro</h2>
+            </div>
+            <div class="mensagem">
+            <ul id="mensagemErro"></ul></div>
+       
+            <form class="cadastrocaixa">
+                
+                <label id="tnickname" class="oque"> Usuário</label>
+                 <input id="nicknamecadastro" required type="text" class="inputu"
+                    placeholder="Digite usuário. maior que 4 caracteres">
+                <br>
+                <label id="temail" class="oque"> E-mail * </label> 
+                <input id="emailcadastro" required type="email" class="inputu"
+                    placeholder="Digite seu E-mail">
+                <br>
+                <label id="treemail" class="oque"> Repetir E-mail * </label>
+                 <input id="reemailcadastro" required type="email" class="inputu"
+                    placeholder="Digite novamente seu E-mail">
+                <br>
+                <label id="tsenhacadastro" class="oque"> Senha * </label> 
+                <input id="senhacadastro" required type="password" class="inputu"
+                    placeholder="Digite uma senha">
+                <br>
+                <label id="tresenhacadastro" class="oque"> Repetir Senha * </label> 
+                <input id="resenhacadastro" required type="password" class="inputu"
+                    placeholder="Digite novamente a senha">
+                <br>
+                <button type="button" class="butau" onclick="cadastrado()"> Cadastrar</button>
+                <div class="mostrar" onclick="show2()"> Caso já possua conta clique aqui</div>
+
+            </form>
+<script>
+    function cadastrado(){
+        var erros = validaContato();
+        mensagemErro.innerHTML ='';
+        mensagemAcerto.innerHTML = "";
+     
+
+        if(erros.length > 0){
+            for (var i = 0; i < erros.length; i++) {
+            var erro = erros[i];
+            var li = document.createElement('li');
+            li.innerHTML = erro;
+            mensagemErro.appendChild(li);
+            }
+        }else {
+            var p = document.createElement("p");
+            p.innerHTML = "Seu Cadastro foi efetuado!";
+            mensagemAcerto.appendChild(p);
+            show2();
+        }
+        /// BD
+        return
+    }
+    function validaContato() {
+        var erros = [];
+     
+        if(emailcadastro.value!=reemailcadastro.value || emailcadastro.value=='' ){
+            erros.push("Os Email estão diferentes")
+            temail.style.color='red'
+            treemail.style.color='red'
+        }else{
+            temail.style.color='white'
+            treemail.style.color='white'
+        }
+
+        if (!nicknamecadastro.value) {
+          erros.push("O Nickname não foi preenchido");
+          tnickname.style.color='red'
+        }else{
+            tnickname.style.color='white'
+        }
+
+        if (!senhacadastro.value) {
+          erros.push("A senha precisa ser preenchida!");
+          tsenhacadastro.style.color='red'
+        }
+        else{
+            tsenhacadastro.style.color='white'
+        }
+        if(senhacadastro.value.length<4){
+            erros.push("A senha precisa ter pelo menos 4 caractere");
+        }
+        if(senhacadastro.value!= resenhacadastro.value ||senhacadastro.value=='' ){
+            erros.push("A senha estão diferentes");
+            tsenhacadastro.style.color='red'
+            tresenhacadastro.style.color='red'
+        }else{
+            tsenhacadastro.style.color='white'
+            tresenhacadastro.style.color='white'
+        }
+        if (emailcadastro.value.indexOf("@") == -1) {
+          erros.push("O formato de email é: usuario@dominio.com");
+        } else {
+          var parts = emailcadastro.value.split("@");
+          var domain = parts[1];
+
+          if (domain.indexOf(".") == -1) {
+            erros.push("O formato de email é: usuario@dominio.com");
+          } else {
+            var domainParts = domain.split(".");
+            var ext = domainParts[1];
+
+            if (ext.length > 4 || ext.length < 2) {
+              erros.push("O formato de email é: seuemail@dominio.com");
+            }
+          }
+        }
+        return erros;
+    }
+</script>
+
+        </div>
+    </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <h4>Copyright © 2021. Todos os direitos reservados &copy; 2021</h4>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function show() {
+        cadastrar.style.display = 'block'
+        this.location = '#cadastrar'
+        entrandoa.style.display = 'none'
+    }
+    function show2() {
+        cadastrar.style.display = 'none'
+     
+        entrandoa.style.display = 'block'
+    }
+  
+</script>

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+} 
+
+
+
+#menu-h{
+    background-color: #006437;
+}
+
+li {
+  padding: 0 ;
+}
+
+.box ul {
+  list-style: none;
+  text-align: center;
+}
+
+#menu-h ul {
+    max-width: 50rem;
+    list-style: none;
+    padding: 0;
+}
+
+#menu-h ul li {
+    display: inline;
+}
+
+#menu-h ul li #entrar{
+  background-color: #04AA6D;
+}
+
+#entrandoa {
+  height: 28.8rem;
+}
+
+#menu-h ul li a {
+    color: #FFF;
+    padding: 1.25rem;
+    display: inline-block;
+    text-decoration: none;
+    transition: background .4s;
+}
+
+#menu-h ul li a:hover {
+    background-color: #003a6d;
+}
+
+#menu-h ul li:last-child a {
+    float: right;
+    background-color: #003a6d;
+}
+
+.dropbtn {
+  background-color: #04AA6D;
+  color: white;
+  padding: 1rem;
+  font-size: 1rem;
+  border: none;
+  height: 3.875rem;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #006437;
+  min-width: 8.125rem;
+  box-shadow: 0px 0.5rem 1rem 0px rgba(0,0,0,0.2);
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  font-size: 0.6875rem;
+  
+}
+
+.dropdown-content a:hover {
+  background-color: #006437;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: auto;
+}
+
+.banner .container p {
+  margin-left: 10%;
+}
+
+.banner {
+  height: 500px;
+  color: white;
+  /* border: 3px solid yellow; */
+  background-image: url("https://static-wp-tor15-prd.torcedores.com/wp-content/uploads/2020/03/ademir_da_guia_palmeiras.jpg");
+  background-size: cover;
+}
+
+.banner .container {
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.banner .container a {
+  /* border: 3px solid cyan; */
+  width: auto;
+  margin: 0;
+  padding: 0;
+  font-size: 36px;
+}
+
+.banner span {
+  font-weight: 800;
+}
+
+.lista-jogos {
+  height: 32.9rem;
+  background-color: #000000;
+}
+
+.lista-jogos .jogo1 {
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ font-size: 35px;
+ color: rgb(157, 168, 0);
+ text-align: center;
+ padding: 2rem;
+}
+
+.mvv {
+  background-color: #04AA6D;
+  /* border: 3px solid yellowgreen; */
+  padding: 50px 0;
+}
+
+.mvv .container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  /* border: 3px solid blue; */
+}
+
+/* usar este bloco para explicar margin e padding*/
+.mvv .titulo {
+  /* border: 3px solid pink; */
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+  font-size: 25px;
+}
+
+.mvv h2 {
+  display: flex;
+  padding: 20px;
+  /* background-color: white;
+  background-size: 10px; */
+  border-radius: 20px;
+  align-self: center;
+  justify-self: center;
+  text-align: center;
+  color: #fff;
+  margin: 0;
+  /* border: 3px solid orange; */
+}
+
+.mvv .boxes {
+  display: flex;
+  /* border: 3px solid blue; */
+}
+
+.mvv .box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  width: 30%;
+  color: #FFF;
+  /* border: 3px solid yellow; */
+}
+
+.mvv .box img {
+  width: 80px;
+  align-self: center;
+}
+
+.mvv .box h4 {
+  color: #fff;
+  margin-top: 30px;
+}
+
+.footer {
+  background-color: #006437;
+  height: 50px;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  font-size: 10px;
+}
+
+h4 {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around
+  ;
+}
+
+
+
+
+.basea{
+
+  margin: 5%;
+  margin-top: 0%;
+   width: 90%;
+   
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+
+text-align: center;
+}
+
+.basea .titulo{
+   color: #006437;
+   font-size: 30px;
+
+}
+
+.cadastrocaixa{
+   background-color: #006437;
+   width: 40%;
+   min-width: 350px;
+   margin-left: 30%;
+   margin-right: 30%;
+   border-radius: 24px;
+   font-size: 25px;
+   color: #ffffff;
+}
+
+
+.inputu{
+   width: 80%;
+   border-radius: 24px;
+   height: 30px;
+   text-decoration: none;
+   margin: 1%;
+   border-color: #006437;
+   appearance: none;
+   outline-style: none;
+}
+.oque{
+   margin-top: 2%;
+}
+.butau{
+   height: 50px;
+   width: 100px;
+   margin: 3%;
+   border-radius: 12px;
+   /* outline-style: none;
+   text-decoration: none; */
+   background-color: #f4511e;
+   color: #ffffff;
+   transition: 0.5s;
+
+}
+.butau:hover{
+   background-color: #080024;
+}
+
+.mostrar{
+  background-color: #f4511e;
+   color: white;
+   margin: 2%;
+   cursor: pointer;
+   transition: 0.5s;
+   font-size: 10px;
+   border-radius: 12px;
+   outline-style: none;
+   text-decoration: none;
+  
+  
+}
+.mostrar:hover{
+   color: #f7805c;
+   
+}
+.cadastru{
+   display: none;
+}
+.mensagem{
+
+   color: #f4511e ;
+   margin-left: 25%;
+   width: 50%;
+   min-width: 300px;
+   font-size: 25px;
+   font-family: Arial;
+   display: flex;
+   justify-content: center;
+   text-decoration: none;
+
+}
+.mensagemacerto{
+
+   color: #04AA6D ;
+display: flex;
+justify-content: center;
+   min-width: 300px;
+   font-size: 25px;
+   font-family: Arial;
+   text-decoration: none;
+
+}
+

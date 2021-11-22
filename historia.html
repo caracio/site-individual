@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+    
+        <link rel="stylesheet" href="Inicio.css">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="navbar-main/navbar-main/style.css">     
+        <script src="navbar-main/navbar-main/mobile-navbar.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+        <title>Entrar</title>
+    </head>
+<body>
+    <header>
+        <nav>
+            <a class="logo" href="index.html">Palmeirático</a>
+            <div class="mobile-menu">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+            <ul class="nav-list">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="Próximosjgs.html">Próximos Jogos</a></li>
+                <li><a href="historia.html">História</a></li>
+                <li><a href="Cadastro.html">Entrar</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+<div class="bodyCarrossel">
+    <div class="carrossel">
+    
+        <div class="container1" id="img">
+            <input type="radio" name="slide" id="slide1">
+            <input type="radio" name="slide" id="slide2">
+            <input type="radio" name="slide" id="slide3">
+            <input type="radio" name="slide" id="slide4">
+            <input type="radio" name="slide" id="slide5">
+
+            <div class="slide s1">
+                <img src="img/Dudu (1).png" alt="">
+            </div>
+            
+            <div class="slide s2">
+                <img src="img/Ademir da Guia (2).png" alt="">
+            </div>
+
+            <div class="slide s3">
+                <img src="img/Dudu (1).png" alt="">
+            </div>
+
+            <div class="slide s4">
+                <img src="img/Ademir da Guia (2).png" alt="">
+            </div>
+
+            <div class="slide s5">
+                <img src="img/Dudu (1).png" alt="">
+            </div>
+
+            <div class="navegacao">
+                <label class="barra" for="slide1"></label>
+                <label class="barra" for="slide2"></label>
+                <label class="barra" for="slide3"></label>
+                <label class="barra" for="slide4"></label>
+                <label class="barra" for="slide5"></label>
+            </div>
+            
+        </div>
+   
+   </div>
+   <div class="texto"><h1> Leleco é legal</h1> </div>
+</div>
+
+</body>
+</html>
+<script>
+
+</script>
+<style>
+   body{
+       margin: 0;
+       padding: 0;
+       height: 100%;;
+       width: 100%;
+       background-color: black;
+       color: #fff;
+   }
+
+   .carrossel{
+    height: 80%;
+    border-radius: 10px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   }
+
+   .navegacao {
+       position: absolute;
+       bottom: 20px;
+       left: 50%;
+       transform: translate(-50%);
+       display: flex;
+   }
+
+   .barra {
+       width: 70px;
+       height: 17px;
+       border: 2px solid #fff;
+       margin: 9px;
+       border-radius: 5px;
+       cursor: pointer;
+       transition: .4s;
+   }
+
+   .barra:hover {
+        background-color: #fff;
+   }
+
+   input{
+       display: none;
+   }
+
+   .container1 {
+       display: flex;
+       width: 500%;
+       height: 100%;
+   }
+
+   .slide{
+       width: 20%;
+       transition: .6s;
+   }
+
+   .slide img {
+    height: 100%;
+    align-items: center;
+    margin-left: 40%;
+   }
+
+   #slide1:checked ~ .s1 {
+       margin-left: 0;
+   }
+
+   #slide2:checked ~ .s1 {
+       margin-left: -20%;
+   }
+
+   #slide3:checked ~ .s1 {
+       margin-left: -40%;
+   }
+   #slide4:checked ~ .s1 {
+       margin-left: -60%;
+   }
+   #slide5:checked ~ .s1 {
+       margin-left: -80%;
+   }
+</style>

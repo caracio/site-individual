@@ -1,0 +1,98 @@
+
+/**/
+.basea{
+
+   margin: 5%;
+   margin-top: 0%;
+    width: 90%;
+display: flex;
+justify-content: center;
+flex-direction: column;
+
+text-align: center;
+}
+
+.basea .titulo{
+    color: white;
+    font-size: 30px;
+
+}
+
+.cadastrocaixa{
+    background-color: rgba(252, 252, 252, 0.315);
+    width: 40%;
+    min-width: 350px;
+    margin-left: 30%;
+    margin-right: 30%;
+    border-radius: 24px;
+    font-size: 25px;
+    color: #ffffff;
+}
+
+
+.inputu{
+    width: 80%;
+    border-radius: 24px;
+    height: 30px;
+    text-decoration: none;
+    margin: 1%;
+    border-color: #370bd6;
+    appearance: none;
+    outline-style: none;
+}
+.oque{
+    margin-top: 2%;
+}
+.butau{
+    height: 50px;
+    width: 100px;
+    margin: 3%;
+    border-radius: 24px;
+    outline-style: none;
+    text-decoration: none;
+    background-color: #370bd6;
+    color: #ffffff;
+    transition: 0.5s;
+
+}
+.butau:hover{
+    background-color: #2f1d72;
+}
+
+.mostrar{
+    color: rgb(187, 255, 0);
+    margin: 2%;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.mostrar:hover{
+    color: rgb(30, 255, 0);
+    
+}
+.cadastru{
+    display: none;
+}
+.mensagem{
+
+    color: #ff0000 ;
+    margin-left: 25%;
+    width: 50%;
+    min-width: 300px;
+    font-size: 25px;
+    font-family: Arial;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+
+}
+.mensagemacerto{
+
+    color: #09ff00 ;
+ display: flex;
+ justify-content: center;
+    min-width: 300px;
+    font-size: 25px;
+    font-family: Arial;
+    text-decoration: none;
+
+}
